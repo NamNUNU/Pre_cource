@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>설문조사</title>
+    <link rel="stylesheet" href="surbay.css">
+</head>
+
+<body>
+    <h1>설문조사입니다</h1>
+    <h2>중식 뷔페 설문조사입니다.</h2>
+    <br>
+    <hr><br>
+    <form action="form-response/new" method="post">
+        <h3>본인의 직업</h3>
+
+        <li><input type="checkbox" name="학생"> 학생</li>
+        <li><input type="checkbox" name="주부"> 주부</li>
+        <li><input type="checkbox" name="회사원"> 회사원</li>
+        <li><input type="checkbox" name="무직"> 무직</li>
+
+        <h3>최근 3개월간 뷔페를 이용한 횟수는?</h3>
+        <label for="number">0<input type="range" min="0" value="5" max="10">10</label>
+        <br>
+        <h3>가장 좋아하는 메뉴는?</h3>
+        <label for="menu"><input class="text"  type="text"></label>
+        <br>
+        <h3>중식 뷔페에서 가장 기대되는 음식</h3>
+        <label for="menu1">탕수육<input type="radio"></label>
+        <label for="menu2">짜장면<input type="radio"></label>
+        <label for="menu3">짬뽕<input type="radio"></label>
+        <label for="menu4">양장피<input type="radio"></label>
+        <br>
+        <h3>좋아하는 차를 선택해 주세요</h3>
+        <select name="tea">
+          <optgroup label="중국차">
+            <option>보이차</option>
+            <option>녹차</option>
+            <option>둥굴레차</option>
+          </optgroup>
+        </select>
+        <br>
+        <h3>e-mail을 입력해 주세요</h3>
+        <input class="text" type="email" name="email">
+
+        <br>
+        <h3>중식뷔페에 바라는 점</h3>
+        <textarea class="text" name="wish" rows="8" cols="80"></textarea>
+        <br>
+        <input class="submit" type="submit">
+    </form>
+</body>
+
+</html>
