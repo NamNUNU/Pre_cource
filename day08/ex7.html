@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var value = "";
+        var regame = "";
+        var result = true;
+        var my_turn = Math.floor(Math.random() * 100) % 3;
+
+        while (result) {
+            value = prompt("가위, 바위, 보!");
+            if (!(value === "가위" || value === "바위" || value === "보")) {
+                alert("가위 바위 보 중에 하나만 내세요!")
+            } else {
+
+                if (value === "가위") {
+                    if (my_turn === 0) { //가위
+                        alert("나도 가위! 비겼습니다")
+                    }
+                    if (my_turn === 1) { //바위
+                        alert("나는 바위! 제가 이겼습니다")
+                    }
+                    if (my_turn === 2) { //보자기
+                        alert("나는 보자기! 제가 졌습니다")
+                    }
+                } else if (value === "바위") {
+                    if (my_turn === 0) { //가위
+                        alert("나는 가위! 제가 졌습니다")
+                    }
+                    if (my_turn === 1) { //바위
+                        alert("나도 바위! 비겼습니다")
+                    }
+                    if (my_turn === 2) { //보자기
+                        alert("나는 보자기! 제가 이겼습니다")
+                    }
+                } else if (value === "보") {
+                    if (my_turn === 0) { //가위
+                        alert("나는 가위! 제가 이겼습니다")
+                    }
+                    if (my_turn === 1) { //바위
+                        alert("나는 바위! 제가 졌습니다")
+                    }
+                    if (my_turn === 2) { //보자기
+                        alert("나도 보자기! 비겼습니다")
+                    }
+                }
+
+                regame = prompt("한판더?(y/n)")
+                if (regame === "n") {
+                    result = false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
