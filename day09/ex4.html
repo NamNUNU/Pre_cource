@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <h2>테마 입니다!</h2>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      var theme;
+      while(1){
+        theme = prompt("바꾸고 싶은 테마가 무엇인가요?(초록/빨강/파랑)");
+        if(isNaN(theme)){
+          if(theme==="초록"||theme==="파랑"||theme==="빨강")
+          break;
+        }
+      }
+      if(theme==="초록"){
+        $('body').css('background-color','lightgreen');
+        $('h1, h2').css('color','green');
+        $('h1, h2').css('border','5px solid darkgreen');
+      } else if(theme==="빨강"){
+        $('body').css('background-color','pink');
+        $('h1, h2').css('color','red');
+        $('h1, h2').css('border','5px solid darkred');
+      }else if(theme==="파랑"){
+        $('body').css('background-color','lightblue');
+        $('h1, h2').css('color','blue');
+        $('h1, h2').css('border','5px solid darkblue');
+      }
+
+
+    </script>
+  </body>
+</html>

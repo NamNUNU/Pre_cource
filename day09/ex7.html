@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      var string = $('<div></div>').attr('id','container').text('hihihihi');
+      var rand1 = Math.random()*500;
+      var rand2 = Math.random()*500;
+      var rand3 = Math.random()*500;
+
+      $('body').append(string);
+      $('body').append('<img id = img1>');
+      $('#img1').attr('src','http://cfile1.uf.tistory.com/image/16184C424D312B761712D3').attr('height','200px');
+      $('body').append('<img id = img2>');
+      $('#img2').attr('src','https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvBqSoILgNy1g0xg7DOCQ01G_p6PYuSPv9nbKX2av-FCTNxyYieA').attr('height','200px');
+      $('body').append('<img id = img3>');
+      $('#img3').attr('src','http://img.insight.co.kr/upload/2015/01/27/ART150127064429.jpg').attr('height','200px');
+      $('#img1').fadeOut(2000).fadeIn().slideUp(2000).fadeIn(1500).css('position','fixed').css({'left':rand1 + 'px','top':rand1+'px','bottom':rand1+'px','right':rand1+'px'});
+      $('#img2').fadeOut(2000).fadeIn().slideUp(2000).fadeIn(1500).css('position','fixed').css({'left':rand2 + 'px','top':rand2+'px','bottom':rand2+'px','right':rand2+'px'});
+      $('#img3').fadeOut(2000).fadeIn().slideUp(2000).fadeIn(1500).css('position','fixed').css({'left':rand3 + 'px','top':rand3+'px','bottom':rand3+'px','right':rand3+'px'});
+
+    </script>
+  </body>
+</html>

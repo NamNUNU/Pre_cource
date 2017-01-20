@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>이건 보여집니다</h1>
+    <p id="secret">이건 비밀입니다</p>
+    <ol>
+      <li>페이드 인페이드 인페이드 인페이드 인페이드 인페이드 인페이드 인페이드 인</li>
+      <li>페이드 인페이드 인페이드 인페이드 인페이드 인페이드 인페이드 인페이드 인</li>
+    </ol>
+    <p><div class="comments">페이드 아웃페이드 아웃페이드 아웃페이드 아웃페이드 아웃페이드 아웃페이드 아웃페이드 아웃</div></p>
+    <br><hr>
+    <div id="thing">슬라이드 다운슬라이드 다운슬라이드 다운슬라이드 다운슬라이드 다운슬라이드 다운슬라이드 다운슬라이드 다운</div>
+    <br><hr>
+    <div id="message">슬라이드 업슬라이드 업슬라이드 업슬라이드 업슬라이드 업슬라이드 업슬라이드 업슬라이드 업</div>
+    <br><hr>
+    <div class="alert">슬라이드 토글슬라이드 토글슬라이드 토글슬라이드 토글슬라이드 토글슬라이드 토글</div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      $('h1').show();
+      $('p#secret').hide();
+      $('ol li').hide();
+      $('ol li').fadeIn();
+      $('p .comments').fadeOut();
+      $('div#thing').hide();
+      $('div#thing').slideDown();
+      $('#message').slideUp();
+      $('.alert').slideToggle();
+    </script>
+  </body>
+</html>

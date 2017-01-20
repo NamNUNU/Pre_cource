@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>I'm blue</h1>
+    <div id="everything">I'm big font</div>
+    <div class="holder">I've white bolder</div>
+    <ul>
+      <li>bolder text1</li>
+      <li>bolder text2</li>
+    </ul>
+    <h1><p>I'm green</p></h1>
+    <div id="secret">hide and block</div>
+    <div id="change-me">change-me to hihi</div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      var string = 'old old'
+      $('h1').css('color','blue');
+      $('body').css('background-color','red');
+      $('#everything').css('font-size','200%');
+      $('.holder').css('border','2px solid white');
+      $('ul li').css('font-style','bold');
+      $('h1 p').css('color','green');
+      $('#secret').hide();
+      $('#secret').show();
+      $('#change-me').text('hihihihi');
+      $('#change-me').wrap('<p>')
+      $('#change-me').append($('<p>new sentence</p>'));
+      $('li').text('new new new new');
+      $('<p>old old old</p>').appendTo($('li'));
+      $('#everything').prepend('<ul><li>1</li><li>2</li><li>3</li></ul>');
+
+    </script>
+  </body>
+</html>

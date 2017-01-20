@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <img >
+    <h1></h1>
+    <div id="notification"></div>
+    <div class="container"></div>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      $('body').css('background-color','red');
+      $('img').attr('src','http://i.imgur.com/nWGCwiE.gif');
+      $('h1').text('hello');
+      $('#notification').html('<div class="alert"><P>Hold On! <b>an error</b> has occured!</P></div>');
+      $('.container').append("<p>what's the difference between <i>.apppend()</i> and .html?</p>");
+    </script>
+  </body>
+</html>
