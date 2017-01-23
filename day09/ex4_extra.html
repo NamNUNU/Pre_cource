@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <h2>테마 입니다!</h2>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      var theme;
+      while(1){
+        theme = prompt("16진수 rgb 값을 넣어주세요(RRGGBB)");
+        break;
+      }
+
+      $('body').css('background-color',"#"+theme);
+      
+    </script>
+  </body>
+</html>
