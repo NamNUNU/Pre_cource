@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="new_sentence"></div>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+    function get_sentence(){
+      var sen1 = "I'm first";
+      var sen2 = "I'm second";
+      var rand = Math.random()*100;
+      if(rand%2>1){
+        return sen1;
+      }else{
+        return sen2;
+      }
+    }
+    var i = 10;
+    while(i--){
+      var new_sentence = get_sentence();
+      $('.new_sentence').append('<p>'+new_sentence+'</p><br>')
+    }
+    </script>
+  </body>
+</html>

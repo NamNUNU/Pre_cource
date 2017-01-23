@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </haed>
+  <body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <div id="target" style="display:none"></div>
+    <img id="target1" style="display:none" src="http://animal-dream.com/data_images/money/money4.jpg">
+    <img id="target2" style="display:none" src="http://www.christiantoday.co.kr/files/article/db/2015/4/30/1430368146_96eddd057c.jpg?w=600">
+
+    <button id="money" type="button" name="button">Show me the money</button>
+    <button id="oprah" type="button" name="button">Show me the Oprah</button>
+    <script type="text/javascript">
+      $('#money').on('click',function(){
+        $('#target1').show();
+      })
+      $('#oprah').on('click',function(){
+        $('#target2').show();
+      })
+    </script>
+  </body>
+</html>

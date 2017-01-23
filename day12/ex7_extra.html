@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style media="screen">
+      span{
+        font-size: 200%;
+      }
+    </style>
+
+</haed>
+
+<body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <label></label>
+    <div id="output"></div>
+
+    <br><br>
+
+    <span id="txt1">The</span>
+    <span id="txt2">point</span>
+    <span id="txt3">of</span>
+    <span id="txt4">using</span>
+    <span id="txt5">Lorem</span>
+    <span id="txt6">Ipsum</span>
+    <span id="txt7">is</span>
+    <span id="txt8">that</span>
+    <span id="txt9">it</span>
+    <span id="txt10">has</span>
+    <span id="txt11">a</span>
+    <span id="txt12">more-or-less</span>
+    <span id="txt13">normal</span>
+    <span id="txt14">distribution</span>
+    <span id="txt15">of</span>
+    <span id="txt16">letters</span>
+
+    <br><br>
+
+    <div id="goal">Finish</div>
+
+    <br><br><br><hr><br>
+
+    <div>
+      <input id="type" type="text">
+    </div>
+    <script type="text/javascript">
+    var i=1;
+    $('#goal').hide().css({'color':'red','font-size':'150%','font-weight':'bold'});
+    $('input#type').on('keypress', function(event){
+      var temp1, temp2;
+
+        if(event.keyCode===32){
+          temp1 = $('#txt'+i).text();
+          temp2 = $('#type').val();
+          console.log(temp1);
+          console.log(temp2);
+          if(temp1===temp2){
+            $('#txt'+i).css({'color':'green','font-weight':'bold'});
+            $('#type').val(''+'');
+            if(i===16){
+              $('#goal').show()
+            }
+            i++;
+          }else{
+            $('#txt'+i).css({'color':'red','font-weight':'bold'});
+          }
+        }
+    })
+    </script>
+
+</body>
+
+</html>

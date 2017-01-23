@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </haed>
+  <body
+  <div id="target">asdf</div>
+  <button type="button" name="button">button</button>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <script type="text/javascript" >
+      var randomColor = '#' + Math.random().toString(16).slice(2,8);
+      var beeper = function (){
+        console.log("flasdf");
+        document.querySelector('#target').textContent = "beep";
+        document.querySelector('body').style.backgroundColor = randomColor;
+      }
+      document.querySelector('button').addEventListener('click',beeper);
+    </script>
+  </body>
+</html>

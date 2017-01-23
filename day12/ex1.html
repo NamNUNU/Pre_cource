@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </haed>
+  <body
+  <div id="target">asdf</div>
+  <button type="button" name="button">button</button>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <script type="text/javascript" >
+      var beeper = function (){
+        console.log("flasdf");
+        document.querySelector('#target').textContent = "beep";
+      }
+      document.querySelector('button').addEventListener('click',beeper);
+    </script>
+  </body>
+</html>

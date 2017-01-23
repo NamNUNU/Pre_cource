@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+
+</haed>
+
+<body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <div id="output"></div>
+    <input id="color" type="text">
+    <button id="go" type="button" name="button">button</button>
+
+    <script type="text/javascript">
+    $('button#go').on('click',function(){
+      $('#output').text($('input#color').val()).css('background-color',$('input#color').val());
+    })
+    </script>
+
+</body>
+
+</html>

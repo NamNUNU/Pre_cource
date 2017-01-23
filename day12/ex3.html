@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style media="screen">
+        .highlighted {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .magic {
+            display: none;
+        }
+    </style>
+</haed>
+
+<body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <div id="target">asdfasdf</div>
+    <img id="magic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Margaret_Hamilton.gif/1024px-Margaret_Hamilton.gif">
+    <script type="text/javascript">
+        $('#target').on('mouseover', function() {
+            $('#target').addClass('highlighted')
+        })
+        $('#target').on('mouseleave', function() {
+            $('#target').removeClass('highlighted')
+        })
+        $('#magic').on('mouseover', function() {
+            $('#magic').addClass('magic')
+        })
+        $('#magic').on('mouseleave', function() {
+            $('#magic').removeClass('magic')
+        })
+    </script>
+
+</body>
+
+</html>

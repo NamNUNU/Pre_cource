@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style media="screen">
+      body, html{
+        height: 100%;
+      }
+      #puppy {
+        position:fixed;
+      }
+      html{
+        cursor: none;
+      }
+    </style>
+  </haed>
+  <body>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <img id="puppy" src="http://cfile7.uf.tistory.com/image/2127004454DAB0C70ED925">
+    <script type="text/javascript">
+      var mouse_tracker = function(event){
+        console.log(event.pageX,event.pageY,!!event.which);
+        if(event.which){
+          $('#puppy').css({'top':event.pageY,'left':event.pageX});
+        }
+      }
+      $('body').on('mousemove',mouse_tracker);
+    </script>
+
+  </body>
+</html>

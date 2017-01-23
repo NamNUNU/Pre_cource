@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<haed>
+    <meta charset="utf-8">
+    <title>Home</title>
+
+</haed>
+
+<body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <label></label>
+    <div id="output"></div>
+    <input id="type" type="text">
+    <script type="text/javascript">
+    //$('input#type').on('keypress', function(event){
+    //  $('label').text(event.keyCode);
+    //})
+    //$('body').on('keypress', function(event){
+    //  $('label').text(String.fromCharCode(event.keyCode));
+    //})
+
+    $('input#type').on('keypress', function nsa_surveillance(event){
+      $('#output').append(String.fromCharCode(event.keyCode));
+    })
+    </script>
+
+</body>
+
+</html>

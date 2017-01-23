@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+    function factorial_of_n(count_by,count_up_to){
+      var result = 1;
+      var temp = 0;
+      while(result < count_up_to){
+        var i = 1;
+        while(i<temp){
+          result*=i;
+          i++;
+        }
+        console.log(result);
+        if(result > count_up_to){
+          break;
+        }
+        temp += count_by;
+        result = 1;
+      }
+    }
+    </script>
+  </body>
+</html>
