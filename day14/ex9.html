@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="bob"></div>
+    <div id="primative_data_types"></div>
+    <div id="array_values"></div>
+    <script type="text/javascript">
+    var complex_object = {
+      string: "I'm a string!",
+      number: 42,
+      array: [
+        "all sorts of stuff", 10, true, undefined,
+        {me: "an object", more: "find me in here!"},
+        function(){ console.log('beepity-beep') }
+      ],
+      simple_object: {name: 'bob', location: 'basement'},
+      fn: function(){
+        console.log("fn has been invoked! Checking both kinds of invocation-time inputs...")
+        console.log("what is my calling context?", this)
+        console.log("what are my arguments?", arguments)
+      }
+    }
+
+    complex_object.string
+    complex_object.array[4]
+    complex_object.simple_object.name
+    complex_object.fn("stuff", "more stuff", "even more stuff!")
+
+    $('#primative_data_types').append(complex_object["string"]);
+    $('#primative_data_types').append(complex_object["number"]);
+
+    for(var i = 0; i<complex_object.array.length; i++){
+      if((typeof complex_object.array[i])==="object"){
+        $('#array_values').append("This is object");
+      }
+      else if((typeof complex_object.array[i])==="function"){
+        complex_object.array[i]();
+      }
+      else{
+        $('#array_values').append(complex_object.array[i]);
+      }
+    }
+    $('#bob').append(complex_object.simple_object["name"]);
+    $('#bob').append(complex_object.simple_object["location"]);
+    complex_object.array[5]();
+    complex_object.fn();
+
+    </script>
+  </body>
+</html>

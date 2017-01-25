@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="answer"></div>
+    <button id="random_btn" type="button" name="button">랜덤 답변</button>
+    <button id="reset_btn" type="button" name="button">reset</button>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      var words = ["틀렸어","맞았어","오늘 운이 좋다","운이 나쁘다","물을 조심해라","불을 조심해라"]
+      $('#random_btn').on('click',function(){
+        var rand = Math.floor( Math.random() * words.length )
+        $('#answer').text(words.pop(words[rand]));
+      });
+      $('#reset_btn').on('click',function(){
+        words = ["틀렸어","맞았어","오늘 운이 좋다","운이 나쁘다","물을 조심해라","불을 조심해라"]
+        $('#answer').text("");
+      });
+
+    </script>
+  </body>
+</html>

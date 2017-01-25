@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var my_dream_life = {};
+      var property_key = "job";
+      var another_property_key = "salary"
+      var next_property = "car"
+
+      my_dream_life[property_key] = "just man";
+      my_dream_life[another_property_key] = "1억";
+      my_dream_life[next_property] = "봉고";
+
+      console.log(my_dream_life[property_key]);
+      console.log(my_dream_life["job"]);
+      console.log(my_dream_life[next_property]);
+      console.log(my_dream_life["car"]);
+
+      property_key = "tall";
+      my_dream_life[property_key] = "180cm";
+      console.log(my_dream_life[property_key]);
+      property_key = "weight";
+      my_dream_life[property_key] = "73kg";
+      console.log(my_dream_life[property_key]);
+      property_key = "company";
+      my_dream_life[property_key] = "google";
+      console.log(my_dream_life[property_key]);
+    </script>
+  </body>
+</html>

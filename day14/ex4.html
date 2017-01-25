@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var demo_object = {
+          one: 1,
+          two: 2,
+          three: 3
+        }
+        var one = "three"
+
+        console.log(demo_object['two']); // ??
+        console.log(demo_object[one]); // ??
+
+        var state_capitals = {
+          California: 'Sacramento',
+          Texas: 'Austin'
+        }
+
+        var place = 'California'
+
+        console.log(state_capitals['place']); // ??
+        console.log(state_capitals.place); // ??
+        console.log(state_capitals[place]); // ??
+
+        console.log(state_capitals['California']); // ??
+        console.log(state_capitals.California); // ??
+        console.log(state_capitals[California]); // ??
+    </script>
+  </body>
+</html>

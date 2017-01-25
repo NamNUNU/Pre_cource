@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      var bucket_list = [];
+
+      bucket_list[0] = "여행";
+      bucket_list[1] = "먹방";
+      bucket_list.push('철인3종대회');
+      bucket_list.push('마라톤');
+      bucket_list.unshift('수영');
+      bucket_list.unshift('자전거 국토종주');
+
+      console.log(bucket_list.length);
+
+      var dying_wish = bucket_list.pop();
+      var do_it_now = bucket_list.shift();
+
+      console.log(dying_wish);
+      console.log(do_it_now);
+      console.log(bucket_list.length);
+
+    </script>
+  </body>
+</html>

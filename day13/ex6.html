@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      var recipe = [];
+      recipe[0] = '물을 끓인다';
+      recipe[1] = '스프를 넣는다';
+      recipe[2] = '면을 넣는다';
+      recipe[3] = '계란을 넣는다';
+
+      var bucket_list = [];
+      bucket_list[0] = "여행";
+      bucket_list[1] = "먹방";
+      bucket_list.push('철인3종대회');
+      bucket_list.push('마라톤');
+      bucket_list.unshift('수영');
+      bucket_list.unshift('자전거 국토종주');
+
+      var dying_wish = bucket_list.pop();
+      var do_it_now = bucket_list.shift();
+
+      var log_me = function(array){
+        console.log(array)
+      }
+
+      function append_strings(data){
+          $('body').append(data+"</br>");
+      }
+
+      recipe.forEach(append_strings);
+      bucket_list.forEach(append_strings);
+
+    </script>
+  </body>
+</html>

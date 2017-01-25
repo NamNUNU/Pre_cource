@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <div>맛있는 레시피</div><br>
+    <div id="recipe"></div><br><hr><br>
+    <div>나의 버킷리스트</div><br>
+    <div id="bucket_list"></div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      var recipe = [];
+      recipe[0] = '물을 끓인다';
+      recipe[1] = '스프를 넣는다';
+      recipe[2] = '면을 넣는다';
+      recipe[3] = '계란을 넣는다';
+
+      var bucket_list = [];
+      bucket_list[0] = "여행";
+      bucket_list[1] = "먹방";
+      bucket_list.push('철인3종대회');
+      bucket_list.push('마라톤');
+      bucket_list.unshift('수영');
+      bucket_list.unshift('자전거 국토종주');
+
+      var dying_wish = bucket_list.pop();
+      var do_it_now = bucket_list.shift();
+
+      var i = 0;
+      while(recipe[i] !== undefined){
+        $('#recipe').append(recipe[i]+"<br>");
+        i++;
+      }
+
+      i = 0;
+      while(bucket_list[i] !== undefined){
+        $('#bucket_list').append(bucket_list[i]+"<br>");
+        i++;
+      }
+
+      //function append_strings(array, selector){
+      //  var i = 0;
+      //  while(array[i] !== undefined){
+      //    $(selector).append(array[i]+"<br>");
+      //    i++;
+      //  }
+      //}
+
+      //append_strings(recipe, '#recipe');
+      //append_strings(bucket_list,'#bucket_list');
+
+    </script>
+  </body>
+</html>

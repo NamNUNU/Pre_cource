@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="text"></div>
+    <script type="text/javascript">
+      var my_cat = {};
+      my_cat.name =  'navi';
+      my_cat.age = 12;
+      my_cat.alive = true;
+
+      var my_dream_life = {};
+      var property_key = "job";
+      var another_property_key = "salary"
+      var next_property = "car"
+
+      my_dream_life[property_key] = "just man";
+      my_dream_life[another_property_key] = "1억";
+      my_dream_life[next_property] = "봉고";
+      property_key = "tall";
+      my_dream_life[property_key] = "180cm";
+      property_key = "weight";
+      my_dream_life[property_key] = "73kg";
+      property_key = "company";
+      my_dream_life[property_key] = "google";
+
+      var dream_car = {}
+      dream_car.make = "honda"
+      dream_car.model = "kimbery"
+      dream_car.color = "red"
+      dream_car.direction = "down"
+      dream_car.year = 1990
+      dream_car.resisted = false;
+      dream_car.greeting = "hihi";
+
+      var target_key = "greeting";
+      for(var car in dream_car){
+        if(car===target_key){
+          $('#text').append(dream_car[car]+"<br>");
+        }
+      }
+
+      for(var cat in my_cat){
+        console.log(my_cat[cat]);
+      }
+      for(var life in my_dream_life){
+        console.log(my_dream_life[life]);
+      }
+      for(var car in dream_car){
+        if(car==="color"){
+          $('#text').append(dream_car[car]+"<br>");
+          console.log(dream_car[car]);
+        }
+        if(dream_car[car]==="down"){
+          $('#text').append(car+"<br>");
+        }
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="dog3"><img id="dog0" src=""></div>
+    <div id="dog4"><img id="dog1" src=""></div>
+    <div id="dog5"><img id="dog2" src=""></div>
+    <script type="text/javascript">
+    var them_dogs = [{
+      name: 'Henry',
+      age: 0.5,
+      breed: 'Aussie',
+      food: 'kibble',
+      toys: ['tennis ball', 'chew toy'],
+      picture: 'http://rubyriverminiaustralianshepherds.com/wp-content/uploads/aussie-puppy-for-sale-940x412.jpg'
+      }, {
+      name: 'Tilly',
+      age: 5,
+      breed: 'Mutt',
+      food: 'kibble',
+      toys: ['bone', 'kong', 'squeaky toy'],
+      picture: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQe5JcPFQOlWdk0vzutXPAVzpIQA6x_nM-peGsj_b-DdnELu739-RIq0fB3'
+      }, {
+      name: 'Apollo',
+      age: 10,
+      breed: 'Labrador',
+      food: 'absolutely anything',
+      toys: ['old sock', 'other old sock', 'more old socks'],
+      picture: 'http://media.cmgdigital.com/shared/img/photos/2014/08/01/5a/66/LadyLabrador.jpg'
+    }]
+
+    for(var i = 0; i<them_dogs.length; i++){
+      for(var c in them_dogs[i]){
+        if(c==="name"){
+          console.log(them_dogs[i][c]);
+        }
+      }
+      //var temp = them_dogs[i];
+      //for(var c in temp){
+      //  if(c==="name"){
+      //    console.log(temp[c]);
+      //  }
+      //}
+    }
+
+    var all_toys = [];
+
+    for(var i = 0; i<them_dogs.length; i++){
+      var temp = them_dogs[i];
+      for(var c in temp){
+        if(c==="toys"){
+          for(var j = 0; j<temp[c].length; j++){
+            all_toys.push(temp[c][j]);
+          }
+        }
+      }
+    }
+    console.log(all_toys);
+
+    for(var i = 0; i<them_dogs.length; i++){
+      var num = i+3;
+    $('#dog'+i).attr('src',them_dogs[i].picture)
+    $('#dog'+num).append("<br>"+them_dogs[i].name)
+    }
+
+    </script>
+  </body>
+</html>

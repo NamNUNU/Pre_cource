@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var favorites = []
+
+      var famous = ['alex smith', 'amy whinehouse', 'cameron diaz', 'brad pitt',
+      'ashton kutcher', 'mark whalberg', 'morgan freeman', 'mila kunis']
+
+      var obama_jobs = []
+
+      var politicos = {
+        secretary_of_state: 'hillary clinton',
+        potus: 'barack obama',
+        flotus: 'michelle obama',
+        vice_prez: 'joe biden',
+        gov_of_california: 'jerry brown'
+      }
+
+      for(var i=0; i<famous.length; i++){
+        if(famous[i][0]==="a"){
+          favorites.push(famous[i]);
+        }
+      }
+
+      for(var key in politicos){
+        famous.push(politicos[key]);
+        var temp = politicos[key].split(' ');
+        if(temp[1]==="obama"){
+          obama_jobs.push(politicos[key]);
+        }
+      }
+
+      console.log(favorites);
+      console.log(famous);
+      console.log(obama_jobs);
+
+      var b_named_politicos = {}
+
+      for(var key in politicos){
+        var temp = politicos[key].split(' ');
+        if(temp[0][0]==="b"||temp[1][0]==="b"){
+          b_named_politicos[key]=politicos[key];
+        }
+      }
+      console.log(b_named_politicos);
+
+      var reverse_politico_lookup = {}
+
+      for(var key in politicos){
+          reverse_politico_lookup[politicos[key]]=key;
+      }
+      console.log(reverse_politico_lookup);
+
+    </script>
+  </body>
+</html>

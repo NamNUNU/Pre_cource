@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var car = {
+      make : "toyota"
+    }
+
+    car["model"] = "Camry"
+    console.log(car["model"]);
+    console.log(car.model);
+
+
+    car.model = "Prius"
+    console.log(car["model"]);
+    console.log(car.model);
+
+    var prop = 'year'
+    console.log(car["nothing_here"]);
+    console.log(car.nothing_here);
+
+    var dream_car = {}
+    dream_car.make = "honda"
+    dream_car.model = "kimbery"
+    dream_car.color = "red"
+    dream_car.year = 1990
+    dream_car.resisted = false;
+
+    console.log(dream_car);
+    </script>
+  </body>
+</html>

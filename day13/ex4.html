@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var scrambled_poem = "roses red are bacon crispy i bacon love and is blue violets are";
+      var scrambled_array =  scrambled_poem.split(' ')
+      var unscrambled_array = [];
+
+      while(scrambled_array.length!==0){
+        unscrambled_array.push(scrambled_array.shift());
+        unscrambled_array.push(scrambled_array.pop());
+      }
+      console.log(unscrambled_array.join(' '));
+    </script>
+  </body>
+</html>
