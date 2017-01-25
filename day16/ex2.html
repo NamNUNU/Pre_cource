@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/javascript">
+    var to_be_run_on_server_response = function(weather_data){
+      $('#container').append(weather_data.main.temp)
+    }
+
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&mode=json&units=imperial&APPID=50209915e0bb37dacb88e9ee4f70d10b').success(to_be_run_on_server_response)
+    </script>
+  </body>
+</html>

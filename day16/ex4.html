@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <div class="container"></div>
+    <button type="button" name="button">back to index</button>
+    <script type="text/javascript">
+    var num;
+    var data_save1,data_save2,data_save3;
+    data_save1 = [];
+    data_save2 = [];
+
+    $('button').on('click',function(){
+      $.get('http://jsonplaceholder.typicode.com/posts/').success(index_view)
+    })
+
+    function place_post_on_page(data){
+      data_save1 = data;
+      console.log(data);
+    }
+    for(var i=1; i<=10; i++){
+      $.get('http://jsonplaceholder.typicode.com/posts/'+i).success(place_post_on_page)
+    }
+
+    function show_view(){
+      $('#content').text("")
+      for(var c in data_save2[num]){
+        $('#content').append(c + " : "+data_save2[num][c]+"<br>")
+      }
+      //$.get('http://jsonplaceholder.typicode.com/comments').success(comment)
+    }
+
+    function index_view(data){
+      data_save2 = data;
+      $('#content').text("")
+      if(data_save2!== undefined){
+        for(var i = 0; i<data.length; i++){
+          num = i;
+          $('#content').append("<p id=post"+i+">"+data_save2[i].title+"<p>");
+          $('#post'+i).on('click',show_view)
+        }
+      }
+      else{
+        for(var i = 0; i<data.length; i++){
+          num = i;
+          $('#content').append("<p id=post"+i+">"+data[i].title+"<p>");
+          $('#post'+i).on('click',show_view)
+        }
+      }
+    }
+    $.get('http://jsonplaceholder.typicode.com/posts/').success(index_view)
+
+    $.ajax({
+      method: 'GET',
+      url: 'http://jsonplaceholder.typicode.com/posts/1',
+      success: function(data) {
+        console.log(data.body)
+      }
+    })
+    $.ajax({
+      method: 'GET',
+      url: 'http://jsonplaceholder.typicode.com/posts/2',
+      success: function(data) {
+        console.log(data.body)
+      }
+    })
+    </script>
+  </body>
+</html>
