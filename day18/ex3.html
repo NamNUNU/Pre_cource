@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var car = {
+      type: "Honda Civic",
+      position: 1,
+      move: function(){
+        var prev = this.position
+        this.position = this.speed + this.position
+        console.log(this.type + " is moving from " + prev + " to " + this.position)
+      }
+    }
+
+    car.speed = 3;
+    car.move();
+    car.move();
+    car.move();
+    car.move();
+    car.move();
+
+    </script>
+  </body>
+</html>

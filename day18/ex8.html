@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var warrior = function(name, weapon){
+        var warrior = {}
+        warrior.name = name;
+        warrior.weapon = weapon;
+        warrior.attack = function(){
+          console.log(name+"이 "+weapon+"로 공격합니다");
+        }
+        warrior.adventrue = function(){
+          this.attack();
+          this.attack();
+          this.attack();
+          this.attack();
+        }
+
+        return warrior;
+      }
+
+      var vavarian = warrior("jim","sword");
+      console.log(vavarian.name);
+      console.log(vavarian.weapon);
+      vavarian.attack();
+      vavarian.adventrue();
+
+    </script>
+  </body>
+</html>

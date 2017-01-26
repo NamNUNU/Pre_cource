@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var car_factory = function(type, speed) {
+            var car = {
+              position:0,
+              type:type,
+              speed:speed,
+              move: function(){
+                this.position += this.speed
+              }
+            }
+
+            return car
+        }
+
+        var new_toyota = car_factory('Toyota Hilux', 3)
+        var new_honda = car_factory('Honda Accord', 5)
+        console.log(new_honda);
+        console.log(new_toyota);
+    </script>
+</body>
+
+</html>

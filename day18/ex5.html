@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var dog = {}
+      dog.name = "뽀삐"
+      dog.location = "서울"
+      function party(){
+        console.log(dog.name + "가 미친듯이 춤을 춥니다");
+      }
+      dog.favorite_food = "사료"
+      function eat(){
+        console.log(dog.name + "가 " + dog.favorite_food +"를 좋아합니다.");
+        this.hungry = false
+      }
+      dog.hungry = true
+      function go_to_park(){
+        this.location = "공원"
+        this.hungry = true
+        console.log(this.location + "에 가면 배가 고프니? " + this.hungry);
+      }
+
+      dog.party = party
+      dog.eat = eat
+      dog.go_to_park = go_to_park
+
+      dog.party()
+      dog.eat()
+      dog.go_to_park()
+
+    </script>
+  </body>
+</html>

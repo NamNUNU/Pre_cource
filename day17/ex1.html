@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="answer"></div>
+    <script type="text/javascript">
+      function answer_logger(fn){
+        $('#answer').append(fn());
+      }
+
+      answer_logger(function(){
+        return "이 string이 div#answer안에 들어가 있어야 합니다"
+      })
+    </script>
+  </body>
+</html>

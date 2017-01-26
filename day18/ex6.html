@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var dog1 = {
+            name: "돌돌이"
+        }
+        var dog2 = {
+            name: "멍뭉이"
+        }
+
+        function free_standing() {
+            console.log(this.name + "가 일어 선다");
+        }
+        dog1.free_standing = free_standing
+        dog2.free_standing = free_standing
+
+        dog1.free_standing()
+        dog2.free_standing()
+
+        dog1.free_standing = free_standing;
+        dog2.free_standing = free_standing;
+
+        //////////////////
+
+        var move_fn = function() {
+            this.position = this.position + this.speed
+            console.log(this.position);
+        }
+
+        var car1 = {
+            type: "Hyundai Civic",
+            speed: 5,
+            position: 1,
+            move: move_fn
+        }
+
+        var car2 = {
+            type: "Toyota Corolla",
+            speed: 3,
+            position: 6,
+            move: move_fn
+        }
+
+        car1.move()
+        car2.move()
+
+        ///////////////////
+
+        var cat1 = {name:"나비"}
+        var cat2 = {name:"냥이"}
+
+        function free_standing2() {
+            console.log(this.name + "가 야옹거립니다");
+        }
+        cat1.meow = free_standing2;
+        cat2.meow = free_standing2;
+
+        cat1.meow()
+        cat2.meow()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/javascript">
+      function secret_keeper(arg1, arg2){
+        var secret = " asdfeasdf "
+        $('#content').append(arg1 + secret + arg2)
+      }
+
+      secret_keeper("arg1","arg2")
+    </script>
+  </body>
+</html>

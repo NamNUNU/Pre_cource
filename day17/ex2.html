@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function answer_collector(array){
+        var array_save = [];
+        for(var i=0; i<array.length; i++){
+          array_save[i] = array[i]();
+        }
+        return array_save;
+      }
+
+      var fn1 = function () {
+       return "first value" }
+      var result = answer_collector([ fn1, function(){ return "second value" } ])
+
+       console.log(result);
+    </script>
+  </body>
+</html>
