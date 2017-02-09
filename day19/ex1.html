@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      .highlight {
+        background-color: yellow;
+        color: red;
+      }
+    </style>
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        var posts = []    // 객체 저장 배열
+
+        function post_factory(id){
+            //post.url = 'http://jsonplaceholder.typicode.com/posts/'
+            var post = {
+                url: 'http://jsonplaceholder.typicode.com/posts/',   // post url
+                $el: $('<div class="post highlight">').appendTo($('body')),  // body에 post 클래스 붙이기
+                initialize: function(id) {      // 초기화 함수
+                    this.$el.attr('id', id)     // id 설정
+                    this.url += id              // 해당 id로 작성된 글의 url 만들기
+                    var thisPost = this
+                    $.get(this.url, function(data) {    // Ajax로 해당 url의 포스트 불러오기
+                        console.log(this)
+                        thisPost.attributes = data
+                        thisPost.render()
+                    })
+                    posts.push(this)  // 컨텍스트를 posts배열에 저장
+                },
+                render: function() {
+                    // .append에 array를 argument로 넣어주면 array안의 item들을 순서대로 넣어줍니다
+                    this.$el.append([
+                        $('<div>').addClass('title').text(this.attributes.title),  // title class 추가
+                        $('<div>').addClass('body').text(this.attributes.body)     // body class 추가
+                    ])
+                },
+
+                highlight:function(){
+                  this.active = true;
+                }
+            }
+            post.initialize(id)
+            return post;
+        }
+
+        for(var i = 75; i<=90; i++){
+            post_factory(i);
+        }
+
+
+    </script>
+</body>
+
+</html>

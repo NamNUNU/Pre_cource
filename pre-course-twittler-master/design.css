@@ -1,0 +1,60 @@
+
+.wrapper{
+  background-color: #efefff;
+}
+
+#header {
+  margin-top: 100px;
+  letter-spacing: 10px;
+  font-size: 300%;
+  font-family: 'Nanum Gothic';
+}
+
+#sub {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+  font-size: 80%;
+  font-family: 'Nanum Gothic';
+}
+#button{
+  margin-bottom: 30px;
+}
+
+#footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 90%;
+  letter-spacing: 3px;
+  font-family: 'Nanum Gothic';
+
+}
+
+#write{
+  align-items: center;
+  align-content: center;
+}
+#tweet-container {
+  background-color: #ffffff;
+}
+
+.time {
+  font-size:80%;
+  color: gray;
+  font-family: 'Nanum Gothic';
+}
+.user {
+  color: blue;
+}
+
+.user:hover {
+  color: darkblue;
+  cursor: pointer;
+}
+
+.tweet {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Nanum Gothic';
+  border-bottom: 0.5px solid gray;
+}

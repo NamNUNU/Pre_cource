@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var function_to_run_when_server_responds = function(receivedData) {
+            console.log(receivedData)
+        }
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=Ontario,%20CA&format=json&callback=function_to_run_when_server_responds'
+        $('head').append($(s));
+    </script>
+</body>
+
+</html>

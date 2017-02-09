@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="text">
+    <button type="button" name="button">검색</button>
+    <script type="text/javascript">
+        var get_pictures = function(searchTerm) {
+            $.ajax({
+                url: "https://api.imgur.com/3/gallery/search?q=" + encodeURI(searchTerm),
+                headers: {
+                    "Authorization": "Client-ID e3776adbe9c5fb9"
+                },
+                success: function(response) {
+                    console.log(response.data)
+                      for(var i =0; i<response.data.length; i++){
+                          $('body').append('<img src='+response.data[i].link+'>')
+                      }
+                }
+            })
+        }
+        $('button').on('click',function(){
+          get_pictures($('input').val());
+        })
+
+        get_pictures("baby deer")
+    </script>
+</body>
+
+</html>

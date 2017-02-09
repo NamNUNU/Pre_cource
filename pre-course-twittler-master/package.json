@@ -1,0 +1,22 @@
+{
+  "name": "twittler",
+  "version": "1.0.0",
+  "description": "### What's Already Here 이 리포에는 가짜 twitter유저가 twit 메시지를 random하게 만들어 data로 저장하는 JavaScript program이 들어 있습니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imskojs/twittler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imskojs/twittler/issues"
+  },
+  "homepage": "https://github.com/imskojs/twittler#readme",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
